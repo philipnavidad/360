@@ -22,12 +22,13 @@
 				sim.scene.add(circle);
 				
 				var octa = new THREE.Mesh(new THREE.OctahedronGeometry(0.2, 0), material);
-				octa.position.z = 0;
+				octa.position.z = -3;
 				octa.scale.y = 0.2;
 				octa.userData.altspace = {collider: {enabled: false}};
 				sim.scene.add(octa);
 
 				sim.renderer.render(sim.scene, sim.camera);
+				sim.scene.position(0,0,3);
 			});
 		});
 	</script>
